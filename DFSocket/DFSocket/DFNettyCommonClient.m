@@ -157,7 +157,7 @@
 
 -(void)socket:(GCDAsyncSocket *)sock didWriteDataWithTag:(long)tag
 {
-    NSLog(@"socket_write_with_tag: %ld",tag);
+    //NSLog(@"socket_write_with_tag: %ld",tag);
     //[_socket readDataWithTimeout:-1 tag:1];
     if (!_hasMarkedRead) {
         [_socket readDataToLength:4 withTimeout:-1 tag:TAG_HEADER];
@@ -168,14 +168,14 @@
 
 -(void)socket:(GCDAsyncSocket *)sock didReadData:(NSData *)data withTag:(long)tag
 {
-    NSLog(@"socket_read_with_tag: %ld   data: %@",tag,data);
+    //NSLog(@"socket_read_with_tag: %ld   data: %@",tag,data);
     _lastActiveTime = [self now];
     
     _hasMarkedRead = NO;
     
     if (tag == TAG_HEADER)
     {
-        NSLog(@"header: %@",data);
+        //NSLog(@"header: %@",data);
         int bodyLength= [self dataToInt:data] - 4 ;
         [_socket readDataToLength:bodyLength withTimeout:-1 tag:TAG_BODY];
     }
