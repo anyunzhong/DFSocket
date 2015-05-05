@@ -13,6 +13,7 @@
 #define TAG_HEADER 1001
 #define TAG_BODY 1002
 
+
 @implementation DFNettyCommonClient
 
 
@@ -34,6 +35,8 @@
 
 -(void) connect:(NSString *) host port:(NSInteger) port
 {
+    _reConnectTimes = 0;
+    
     _host = host;
     _port = port;
     [self start];
@@ -69,6 +72,8 @@
 }
 -(void) disconnect
 {
+    _reConnectTimes = 0;
+    
     [self close];
     
     [_autoRestartTimer invalidate];
@@ -129,6 +134,8 @@
 - (void)socket:(GCDAsyncSocket *)sock didConnectToHost:(NSString *)host port:(uint16_t)port{
     
     NSLog(@"socket_connected! %@", sock);
+    
+    _reConnectTimes = 0;
     
     [self setStatus:RUNNING];
     _lastActiveTime = [self now];
@@ -216,6 +223,11 @@
     
     NSLog(@"reconnect_times: %ld",(long)_reConnectTimes);
     
+    if (_reConnectTimes >= MaxReconnectTimes) {
+         NSLog(@"reconnect_times_max: %ld",(long)_reConnectTimes);
+        [self disconnect];
+        return;
+    }
     [self start];
     
     

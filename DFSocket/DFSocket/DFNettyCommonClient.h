@@ -14,7 +14,8 @@ typedef NS_ENUM(NSUInteger, CONNECTION_STATUS){
 };
 
 #define HEARTBEAT_TIMEOUT_INTERVAL 60
-#define HEARTBEAT_SEND_INTERVAL 5
+#define HEARTBEAT_SEND_INTERVAL 15
+#define MaxReconnectTimes 10
 
 #define kNotifyStatus @"notify_status"
 #define kStatus @"status"
