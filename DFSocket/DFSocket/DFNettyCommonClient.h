@@ -20,7 +20,7 @@ typedef NS_ENUM(NSUInteger, CONNECTION_STATUS){
 #define kNotifyStatus @"notify_status"
 #define kStatus @"status"
 #define kNotifyDataReceived @"notify_data_received"
-#define kDataPackage @"data_package"
+#define kDataPacket @"data_packet"
 
 
 

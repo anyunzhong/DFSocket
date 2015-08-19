@@ -191,7 +191,7 @@
         
         dispatch_async(dispatch_get_main_queue(), ^{
             
-            NSDictionary *dic = [NSDictionary dictionaryWithObject:data forKey:kDataPackage];
+            NSDictionary *dic = [NSDictionary dictionaryWithObject:data forKey:kDataPacket];
             [[NSNotificationCenter defaultCenter] postNotificationName:kNotifyDataReceived object:nil userInfo:dic];
         });
         [_socket readDataToLength:4 withTimeout:-1 tag:TAG_HEADER];
