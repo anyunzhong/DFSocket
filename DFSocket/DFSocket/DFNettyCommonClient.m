@@ -7,7 +7,7 @@
 //
 
 #import "DFNettyCommonClient.h"
-#import "Reachability.h"
+#import "Reachability_B.h"
 
 
 #define TAG_HEADER 1001
@@ -263,7 +263,7 @@
 
 -(BOOL) isNetworkAvailable
 {
-    return [Reachability isEnable3G] || [Reachability isEnableWIFI]?YES:NO;
+    return [Reachability_B isEnable3G] || [Reachability_B isEnableWIFI]?YES:NO;
 }
 
 

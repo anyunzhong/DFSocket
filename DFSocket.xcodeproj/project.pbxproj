@@ -13,6 +13,9 @@
 		110FA3421AF401EB00771420 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 110FA3401AF401EB00771420 /* Main.storyboard */; };
 		110FA3441AF401EB00771420 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 110FA3431AF401EB00771420 /* Images.xcassets */; };
 		110FA3471AF401EB00771420 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 110FA3451AF401EB00771420 /* LaunchScreen.xib */; };
+		11E1578C1BC00D3D00F2F99A /* DFNettyCommonClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 11E157861BC00D3D00F2F99A /* DFNettyCommonClient.m */; };
+		11E1578D1BC00D3D00F2F99A /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 11E157891BC00D3D00F2F99A /* GCDAsyncSocket.m */; };
+		11E1578E1BC00D3D00F2F99A /* Reachability_B.m in Sources */ = {isa = PBXBuildFile; fileRef = 11E1578B1BC00D3D00F2F99A /* Reachability_B.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,13 @@
 		110FA3411AF401EB00771420 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		110FA3431AF401EB00771420 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		110FA3461AF401EB00771420 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		11E157851BC00D3D00F2F99A /* DFNettyCommonClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFNettyCommonClient.h; sourceTree = "<group>"; };
+		11E157861BC00D3D00F2F99A /* DFNettyCommonClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFNettyCommonClient.m; sourceTree = "<group>"; };
+		11E157871BC00D3D00F2F99A /* DFSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFSocket.h; sourceTree = "<group>"; };
+		11E157881BC00D3D00F2F99A /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
+		11E157891BC00D3D00F2F99A /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		11E1578A1BC00D3D00F2F99A /* Reachability_B.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability_B.h; sourceTree = "<group>"; };
+		11E1578B1BC00D3D00F2F99A /* Reachability_B.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability_B.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +68,7 @@
 		110FA3351AF401EB00771420 /* DFSocket */ = {
 			isa = PBXGroup;
 			children = (
+				11E157841BC00D3D00F2F99A /* DFSocket */,
 				110FA33A1AF401EB00771420 /* AppDelegate.h */,
 				110FA33B1AF401EB00771420 /* AppDelegate.m */,
 				110FA33D1AF401EB00771420 /* ViewController.h */,
@@ -77,6 +88,20 @@
 				110FA3381AF401EB00771420 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		11E157841BC00D3D00F2F99A /* DFSocket */ = {
+			isa = PBXGroup;
+			children = (
+				11E157851BC00D3D00F2F99A /* DFNettyCommonClient.h */,
+				11E157861BC00D3D00F2F99A /* DFNettyCommonClient.m */,
+				11E157871BC00D3D00F2F99A /* DFSocket.h */,
+				11E157881BC00D3D00F2F99A /* GCDAsyncSocket.h */,
+				11E157891BC00D3D00F2F99A /* GCDAsyncSocket.m */,
+				11E1578A1BC00D3D00F2F99A /* Reachability_B.h */,
+				11E1578B1BC00D3D00F2F99A /* Reachability_B.m */,
+			);
+			path = DFSocket;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,7 +175,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				110FA33F1AF401EB00771420 /* ViewController.m in Sources */,
+				11E1578D1BC00D3D00F2F99A /* GCDAsyncSocket.m in Sources */,
 				110FA33C1AF401EB00771420 /* AppDelegate.m in Sources */,
+				11E1578E1BC00D3D00F2F99A /* Reachability_B.m in Sources */,
+				11E1578C1BC00D3D00F2F99A /* DFNettyCommonClient.m in Sources */,
 				110FA3391AF401EB00771420 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,6 +328,7 @@
 				110FA3581AF401EB00771420 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
